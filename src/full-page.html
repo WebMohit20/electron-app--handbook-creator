@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full-page</title>
+    <link rel="stylesheet"
+        href="https://d1tq2834awssza.cloudfront.net/80b99c15-b648-43a6-86f5-ef7c22b8b98a/build/assets/app-5114826c.css" />
+    <script type="module" defer
+        src="https://d1tq2834awssza.cloudfront.net/80b99c15-b648-43a6-86f5-ef7c22b8b98a/build/assets/app-d250f9ec.js"></script>
+</head>
+
+<body class="print:printable-document-styling handbook-legacy">
+
+
+
+    <main>
+        <div class="container mt-8 md:mt-12">
+            <div class="col-span-12 md:col-span-4 lg:col-span-3">
+                
+                <div class="sticky h-min top-0 py-5 -my-5 hidden md:block" x-data="dynamicSticky" x-ref="element"
+                    x-cloak>
+                    <aside>
+                        <div class="spacing-y-sm">
+                            <nav class="print-hidden" aria-label="Handbook navigation">
+
+                                <ul role="presentation">
+                                    <li x-data="{ showChildren: false }"
+                                        class="mb-2 type-body type-body--sm text-dark-100">
+                                        <a href="../../handbook.html" class="flex gap-[0.55em] items-center">
+                                            <span class="ml-[1.25em]"> Introduction</span>
+                                        </a>
+                                    </li>
+                                    <li x-data="{ showChildren: true }"
+                                        class="mb-2 type-body type-body--sm text-dark-100">
+                                        <button type="button" @click="showChildren = !showChildren"
+                                            class="text-black font-semibold mb-2 flex gap-[0.55em] items-center">
+                                            <span :class="{'rotate-90': showChildren}">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                                                    class="w-[0.65em] -rotate-90" aria-hidden="true">
+                                                    <path
+                                                        d="M31.54,9.71,16,25,.48,9.71A1.57,1.57,0,0,1,.12,8a1.63,1.63,0,0,1,2.63-.51L16,20.52l13.26-13a1.6,1.6,0,0,1,2.27,2.24Z"
+                                                        fill="currentColor" />
+                                                </svg>
+                                            </span>
+                                            Interface and Gestures
+                                        </button>
+                                        <ul x-show="showChildren" id="titles" x-cloak>
+                                            <li class="mb-2">
+                                                <a class="ml-[1.2em] mb-2" href="../interface-gestures.html">
+                                                    Overview
+                                                </a>
+                                            </li>
+
+                                            
+
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+
+                            </nav>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+        <div class="py-16 md:py-32 grid-bg print-hidden mt-12 md:mt-32">
+            <div class="container">
+                <div class="flex flex-col gap-4 text-center">
+                    <h2 class="-mt-2 type-heading type-heading--lg text-black-100 dark:text-white-100">Still have <span
+                            class="type-scribble">questions?</span>
+                    </h2>
+                    <p class="type-body--lg text-dark-300 dark:text-light max-w-[700px] mx-auto">If you didn't find what
+                        you're looking for, explore our video resources on YouTube or contact us directly. We’re always
+                        happy to&nbsp;help.</p>
+                    <div class="flex gap-4 justify-center flex-wrap mt-2">
+                        <a href="https://www.youtube.com/channel/UCU88WY0qX2bzDjjOLOj-Gng" target="_blank"
+                            class="button-cta">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none"
+                                class="!w-[1.5em] text-blue" aria-hidden="true">
+                                <path fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"
+                                    d="M15.9412 28.8824C23.0884 28.8824 28.8824 23.0884 28.8824 15.9412C28.8824 8.79396 23.0884 3 15.9412 3C8.79396 3 3 8.79396 3 15.9412C3 23.0884 8.79396 28.8824 15.9412 28.8824ZM20.8418 16.7223C21.4972 16.391 21.4972 15.4919 20.8418 15.1606L14.0582 11.731C13.4443 11.4206 12.7059 11.847 12.7059 12.5119V19.371C12.7059 20.0359 13.4443 20.4622 14.0582 20.1518L20.8418 16.7223Z" />
+                            </svg>
+                            Watch on YouTube
+                        </a>
+                        <a href="../../../support.html" class="button-cta">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 33"
+                                class="!w-[1.5em] text-blue" aria-hidden="true">
+                                <path
+                                    d="m28.52,12.62h-.01s-2.45.01-2.45.01v5.25c0,1.69-1.38,3.06-3.06,3.06h-12.24v3.35c0,.8.67,1.46,1.48,1.46h11.89c.34,0,.68.12.94.34l3.44,2.81c.28.22.64.28.97.12s.52-.46.52-.83v-14.1c0-.8-.67-1.46-1.48-1.46Z"
+                                    style="stroke-width:0px;" />
+                                <path
+                                    d="m24.73,17.89V5.65c0-.97-.79-1.75-1.75-1.75H3.75c-.96,0-1.75.79-1.75,1.75v17.29c0,.37.2.68.52.83.33.16.7.1.98-.13l4.33-3.6c.31-.26.71-.41,1.12-.41h14.03c.97,0,1.75-.79,1.75-1.75Z"
+                                    style="stroke-width:0px;" />
+                            </svg>
+                            Talk to the team
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div x-cloak class="application-drawers" x-bind:class="{'hidden': $store.drawers.drawersOpen == 0}">
+        <div x-bind:class="{'drawers-container--active-drawers': $store.drawers.drawersOpen > 0}"
+            class="drawers-container">
+            <button class="drawers-container__background"></button>
+            <div id="drawers-go-here"></div>
+        </div>
+    </div>
+
+    <div x-cloak class="application-modals" x-bind:class="{'hidden': $store.modals.modalsOpen == 0}">
+        <div x-bind:class="{'modals-container--active-modals': $store.modals.modalsOpen > 0}" class="modals-container">
+            <div class="modals-container__background"></div>
+            <div id="modals-go-here"></div>
+        </div>
+    </div>
+
+    <footer class="pt-12 md:pt-16 print-hidden">
+
+        <div class="container spacing-y-md">
+            <svg class="h-[24px]" viewBox="0 0 134 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M96.9019 1.21387H95.5073V16H96.9019V9.11963H104.756V16H106.151V1.21387H104.756V7.8584H96.9019V1.21387ZM118.61 1.21387V16H120.005V1.21387H118.61ZM125.583 15.9692C126.062 16.147 126.564 16.2358 127.091 16.2358C127.938 16.2358 128.7 16.0171 129.377 15.5796C130.054 15.1421 130.584 14.5166 130.967 13.7031C131.356 12.8896 131.551 11.9326 131.551 10.832C131.551 9.74512 131.36 8.79492 130.977 7.98145C130.601 7.16113 130.074 6.52881 129.398 6.08447C128.721 5.64014 127.952 5.41797 127.091 5.41797C126.544 5.41797 126.034 5.51025 125.563 5.69482C125.091 5.87939 124.671 6.14258 124.302 6.48438C123.939 6.81934 123.645 7.21582 123.42 7.67383H123.399V5.65381H122.005V19.9888H123.399V13.98H123.42C123.659 14.4517 123.96 14.855 124.322 15.1899C124.691 15.5249 125.112 15.7847 125.583 15.9692ZM128.495 14.4824C127.983 14.8242 127.398 14.9951 126.742 14.9951C126.079 14.9951 125.494 14.8242 124.989 14.4824C124.483 14.1338 124.086 13.645 123.799 13.0161C123.519 12.3872 123.379 11.6592 123.379 10.832C123.379 10.0117 123.519 9.28711 123.799 8.6582C124.079 8.02246 124.472 7.53027 124.978 7.18164C125.491 6.83301 126.082 6.65869 126.752 6.65869C127.408 6.65869 127.993 6.82959 128.506 7.17139C129.025 7.50635 129.425 7.98828 129.705 8.61719C129.992 9.24609 130.136 9.98096 130.136 10.8218C130.136 11.6626 129.989 12.3975 129.695 13.0264C129.408 13.6553 129.008 14.1406 128.495 14.4824ZM112.734 16.2358C111.702 16.2358 110.824 16.0034 110.099 15.5386C109.381 15.0737 108.841 14.4277 108.479 13.6006C108.117 12.7734 107.935 11.8369 107.935 10.791C107.935 9.68359 108.13 8.72656 108.52 7.91992C108.916 7.11328 109.474 6.49463 110.191 6.06396C110.909 5.6333 111.743 5.41797 112.693 5.41797C113.616 5.41797 114.409 5.63672 115.072 6.07422C115.742 6.51172 116.248 7.10986 116.59 7.86865C116.938 8.62744 117.113 9.48193 117.113 10.4321C117.113 10.562 117.109 10.6816 117.102 10.791C117.102 10.9004 117.099 11.02 117.092 11.1499H109.279C109.313 11.9429 109.463 12.6299 109.73 13.2109C110.003 13.792 110.393 14.2397 110.899 14.5542C111.412 14.8618 112.037 15.0156 112.775 15.0156C113.274 15.0156 113.722 14.9336 114.119 14.7695C114.515 14.5986 114.843 14.3491 115.103 14.021C115.37 13.6929 115.571 13.2998 115.708 12.8418H117.051C116.901 13.5527 116.627 14.1646 116.231 14.6772C115.834 15.1831 115.335 15.5693 114.734 15.8359C114.139 16.1025 113.473 16.2358 112.734 16.2358ZM115.749 10.0425C115.735 9.35205 115.605 8.74365 115.359 8.21729C115.12 7.68408 114.771 7.27051 114.313 6.97656C113.855 6.67578 113.309 6.52539 112.673 6.52539C112.044 6.52539 111.487 6.65869 111.001 6.92529C110.516 7.18506 110.126 7.57812 109.832 8.10449C109.538 8.62402 109.357 9.27002 109.289 10.0425H115.749Z"
+                    fill="currentColor" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M90.2777 2.99163C90.2777 3.98698 89.5055 4.71006 88.5682 4.71006C87.6308 4.71006 86.8721 3.99591 86.8721 3.00502C86.8721 2.01414 87.6442 1.29999 88.5816 1.29999C89.5189 1.29999 90.2777 2.00521 90.2777 2.99163ZM89.9652 3.00056C89.9652 2.18821 89.327 1.59904 88.5771 1.59904C87.8272 1.59904 87.1756 2.18821 87.1756 3.00502C87.1756 3.82183 87.8138 4.40655 88.5637 4.40655C89.3136 4.40655 89.9652 3.81737 89.9652 3.00056ZM88.9609 3.06305L89.4341 3.86201H89.0591L88.6619 3.08983H88.1932V3.86201H87.8763V2.07663H88.7824C89.1216 2.07663 89.3627 2.28195 89.3627 2.56314C89.3627 2.80417 89.202 2.9961 88.9609 3.05859V3.06305ZM88.1977 2.81756H88.7556C88.9342 2.81756 89.0591 2.71936 89.0591 2.57653C89.0591 2.45156 88.9476 2.35782 88.7824 2.35782H88.1932V2.81756H88.1977ZM6.3738 10.6153C9.46163 10.6153 11.4655 8.6302 11.4666 6.00234C11.4655 3.37005 9.46163 1.45185 6.3738 1.45185H0V16.0652H3.27617V10.6153H6.3738ZM5.8739 3.91121C7.3771 3.91121 8.25178 4.86961 8.25291 5.99791C8.25178 7.16634 7.3771 8.14702 5.8739 8.14702H3.27617V3.91121H5.8739ZM25.1381 16.3329C28.517 16.3329 30.6683 14.061 30.6683 10.7402C30.6683 7.46401 28.4991 5.18765 25.1381 5.18765C21.7772 5.18765 19.6258 7.42384 19.6258 10.7402C19.6258 14.0565 21.7593 16.3329 25.1381 16.3329ZM25.1337 13.9762C23.4643 13.9762 22.5047 12.6193 22.5047 10.7402C22.5047 8.90124 23.442 7.54435 25.1337 7.54435C26.8253 7.54435 27.785 8.86107 27.785 10.7402C27.785 12.6193 26.803 13.9762 25.1337 13.9762ZM36.9507 16.2927C33.8186 16.2916 31.8824 13.9754 31.8824 10.8428C31.8824 7.70949 33.824 5.39296 36.9529 5.39296C39.6443 5.39296 41.336 7.02212 41.693 9.23599H39.9389C39.6443 7.8791 38.707 6.85697 36.9529 6.85697C34.8015 6.85697 33.5517 8.54862 33.5517 10.8428C33.5517 13.137 34.806 14.8287 36.9529 14.8287C38.8097 14.8287 39.7916 13.6994 40.0416 12.1997H41.7511C41.4789 14.5558 39.7702 16.2918 36.9507 16.2927ZM54.3648 5.39296C51.3386 5.39296 49.2943 7.69164 49.2943 10.9053L49.2988 10.9098C49.2988 14.0029 51.2002 16.2972 54.3291 16.2972C56.6858 16.2972 58.4399 14.9581 59.0246 12.7264H57.1232C56.6233 14.2261 55.4539 14.8331 54.2844 14.8331C52.4678 14.8331 51.2136 13.3915 51.0886 11.2847V11.1999H59.105V10.8428C59.105 7.70949 57.391 5.39296 54.3648 5.39296ZM54.3469 6.85251C56.2439 6.85251 57.333 8.14691 57.3731 9.90104H51.1332C51.4457 8.02193 52.5526 6.85251 54.3469 6.85251ZM69.1923 9.25833V16.0651H67.523V14.4181H67.4828C66.9829 15.2126 65.7064 16.1722 63.8094 16.1722C61.7652 16.1722 60.4083 15.0251 60.4083 13.1862C60.4083 11.2044 61.8901 9.72253 66.0858 9.72253H67.5275V9.26279C67.5275 7.78093 66.5902 6.86146 65.0637 6.86146C63.622 6.86146 62.6623 7.65595 62.582 8.92803H60.8725C60.935 6.7588 62.5418 5.40191 65.0681 5.40191C67.5944 5.40191 69.2013 6.88378 69.2013 9.26279L69.1923 9.25833ZM67.523 12.0346V11.0526H66.0813C62.9926 11.0526 62.0732 11.9721 62.0732 13.1415C62.0732 14.186 62.8855 14.7885 64.1799 14.7885C66.0144 14.7885 67.5186 13.4718 67.5186 12.0346H67.523ZM83.1852 5.39296C80.159 5.39296 78.1148 7.69164 78.1148 10.9053L78.1192 10.9098C78.1192 14.0029 80.0207 16.2972 83.1495 16.2972C85.5062 16.2972 87.2604 14.9581 87.8451 12.7264H85.9437C85.4438 14.2261 84.2743 14.8331 83.1049 14.8331C81.2883 14.8331 80.0341 13.3915 79.9091 11.2847V11.1999H87.9254V10.8428C87.9254 7.70949 86.2115 5.39296 83.1852 5.39296ZM83.1674 6.85251C85.0644 6.85251 86.1535 8.14691 86.1936 9.90104H79.9537C80.2662 8.02193 81.3731 6.85251 83.1674 6.85251ZM49.031 5.58488C47.2054 5.75449 45.8084 6.51774 45.0808 8.17368V5.62952H43.3713V16.0651H45.0808V11.5793C45.0808 8.71376 46.3975 7.42382 49.031 7.44614V5.58488ZM15.4435 8.12905C16.0461 6.37492 17.3092 5.56703 19.1839 5.39296V5.39742V8.35223C16.4255 8.27635 15.4435 9.50379 15.4435 12.0747V16.0606H12.5021V5.45545H15.4435V8.12905ZM77.7354 7.08462V7.08908L77.7398 7.08462H77.7354ZM77.7354 5.62953V7.08462H73.9191V12.6148C73.9191 13.9717 74.6467 14.7037 76.0259 14.7037C76.4365 14.7037 76.9096 14.6502 77.4185 14.4761V15.9937C77.0034 16.132 76.5347 16.2079 76.0259 16.2079C73.687 16.2079 72.2052 14.8332 72.2052 12.6193V7.08908H70.0136V5.634H70.6876H70.9241H71.5401C71.9061 5.634 72.2052 5.33495 72.2052 4.96894V2.28641H73.9147V5.62953H77.7354Z"
+                    fill="currentColor" />
+            </svg>
+
+            <nav aria-label="Footer Menu" class="flex flex-wrap justify-between gap-4">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-12 w-full  md:w-auto">
+                    <ul role="presentation" class="type-body--xs space-y-0.5">
+                        <li class="font-medium text-black dark:text-white whitespace-nowrap">Procreate for iPad</li>
+                        <li class="text-dark-600 dark:text-light">
+                            <a class="hover:underline whitespace-nowrap" href="../../../procreate.html"
+                                aria-label="Overview - Procreate for iPad" target="
+            _self">Overview</a>
+                        </li>
+                        <li class="text-dark-600 dark:text-light">
+                            <a class="hover:underline whitespace-nowrap" href="../../../procreate/handbook.html"
+                                aria-label="Handbook - Procreate for iPad" target="
+            _self">Handbook</a>
+                        </li>
+                        <li class="text-dark-600 dark:text-light">
+                            <a class="hover:underline whitespace-nowrap"
+                                href="https://www.youtube.com/playlist?list=PLlpSQCrjuGkriILjGVhAMxaroOgpGDbvl"
+                                aria-label="Beginners Series - Procreate for iPad" target="_blank">Beginners Series</a>
+                        </li>
+                    </ul>
+                    <ul role="presentation" class="type-body--xs space-y-0.5">
+                        <li class="font-medium text-black dark:text-white whitespace-nowrap">Procreate Dreams</li>
+                        <li class="text-dark-600 dark:text-light">
+                            <a class="hover:underline whitespace-nowrap" href="../../../dreams.html"
+                                aria-label="Overview - Procreate Dreams" target="
+            _self">Overview</a>
+                        </li>
+                        <li class="text-dark-600 dark:text-light">
+                            <a class="hover:underline whitespace-nowrap" href="../../../dreams/handbook.html"
+                                aria-label="Handbook - Procreate Dreams" target="
+            _self">Handbook</a>
+                        </li>
+                    </ul>
+                    <ul role="presentation" class="type-body--xs space-y-0.5">
+                        <li class="font-medium text-black dark:text-white whitespace-nowrap">Procreate Pocket</li>
+                        <li class="text-dark-600 dark:text-light">
+                            <a class="hover:underline whitespace-nowrap" href="../../../pocket.html"
+                                aria-label="Overview - Procreate Pocket" target="
+            _self">Overview</a>
+                        </li>
+                        <li class="text-dark-600 dark:text-light">
+                            <a class="hover:underline whitespace-nowrap" href="../../handbook.html"
+                                aria-label="Handbook - Procreate Pocket" target="
+            _self">Handbook</a>
+                        </li>
+                    </ul>
+                    <ul role="presentation" class="type-body--xs space-y-0.5 md:hidden">
+                        <li class="font-medium text-black dark:text-white whitespace-nowrap">Discover</li>
+                        <li class="text-dark-600 dark:text-light">
+                            <a class="hover:underline whitespace-nowrap" href="https://procreate.com"
+                                aria-label="Procreate.com" target="_blank">Procreate.com</a>
+                        </li>
+                        <li class="text-dark-600 dark:text-light">
+                            <a class="hover:underline whitespace-nowrap" href="https://education.procreate.com"
+                                aria-label="Education" target="_blank">Education</a>
+                        </li>
+                    </ul>
+                </div>
+                <ul role="presentation" class="type-body--xs space-y-0.5 hidden md:block">
+                    <li class="font-medium text-black dark:text-white whitespace-nowrap">Discover</li>
+                    <li class="text-dark-600 dark:text-light">
+                        <a class="hover:underline whitespace-nowrap" href="https://procreate.com"
+                            aria-label="Procreate.com" target="_blank">Procreate.com</a>
+                    </li>
+                    <li class="text-dark-600 dark:text-light">
+                        <a class="hover:underline whitespace-nowrap" href="https://education.procreate.com"
+                            aria-label="Education" target="_blank">Education</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div
+                class="border-t py-3 border-t-black/10 text-[12px] text-center flex flex-col gap-2 items-center justify-between lg:flex-row lg:text-left">
+                <p class="text-light-800 dark:text-dark">
+                    <span class="block text-black-100 dark:text-white-100">Made in nipaluna (Hobart), Australia</span>
+                    Copyright 2025 Savage Interactive. All rights reserved. Procreate® is a registered trademark of
+                    Savage Interactive Pty&nbsp;Ltd.
+                </p>
+                <nav aria-label="Site Information">
+                    <ul role="presentation"
+                        class="flex items-center gap-1.5 w-full justify-center flex-wrap lg:justify-end lg:flex-nowrap">
+                        <li>
+                            <a class="whitespace-nowrap hover:underline" href="https://procreate.com/terms-conditions"
+                                target="_blank">Terms &amp; Conditions</a>
+                        </li>
+                        <li>
+                            <a class="whitespace-nowrap hover:underline" href="https://procreate.com/privacy-policy"
+                                target="_blank">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a class="whitespace-nowrap hover:underline" href="https://procreate.com/cookies-policy"
+                                target="_blank">Cookies Policy</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js" ></script>
+</body>
+
+</html>

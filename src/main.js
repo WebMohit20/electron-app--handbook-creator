@@ -5,7 +5,7 @@ let mainWindow;
 function createWindow() {
     mainWindow = new BrowserWindow({ width: 800, height: 600 });
     
-    mainWindow.loadFile('src/index.html');
+    mainWindow.loadFile('src/full-page.html');
 
     mainWindow.on('closed', () => {
         mainWindow = null;

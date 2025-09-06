@@ -7,7 +7,6 @@ const editor = new Editor({
     width: '400px',
     initialEditType: 'WYSIWYG',
     previewStyle: 'tab',
-    // theme: 'dark'
 });
 
 const download = document.getElementById('download')
@@ -22,11 +21,15 @@ download.addEventListener('click', () => {
 
 })
 
+
+
+// https://www.geeksforgeeks.org/javascript/how-to-check-a-dom-element-is-visible-in-current-viewport/#GFG_AD_Desktop_InContent_ATF_728x280
+
 upload.addEventListener('change', (evt) => {
     const file = evt.target.files[0]
-    
+
     if (file) {
-        
+
         const reader = new FileReader()
         reader.onload = (e) => {
             const htmlContent = e.target.result
@@ -48,8 +51,8 @@ convert.addEventListener('click', () => {
 
     doc.head.append(css)
 
-    downloadContent(doc)
-    // console.log(doc.body)
+    // downloadContent(doc)
+    console.log(doc.body)
 
 
 })
@@ -83,9 +86,11 @@ function handleEle(temp) {
                     h2Handler(ele)
                 } else if (ele.tagName === 'H3') {
                     h3Handler(ele)
-                } else if (ele.tagName === 'UL') {
+                } else if (ele.tagName === 'OL') {
                     listHandler(ele)
                     // ele.remove()
+                } else if (ele.tagName === 'BLOCKQUOTE') {
+                    iframeHandler(ele)
                 }
             }
 
@@ -167,6 +172,7 @@ function subHeadingHandler(ele) {
 }
 
 function listHandler(ele) {
+    let parentDiv = document.createElement('div')
     ele
         .childNodes
         .forEach((li, idx) => {
@@ -177,32 +183,78 @@ function listHandler(ele) {
             li
                 .childNodes[0]
                 .childNodes
-                .forEach(el => {
-                    if (el.tagName === 'DEL') {
-
-                        p.innerHTML = el.innerHTML
-
-                        el.replaceWith(p)
-
-                        paraHandler(p)
-
-                    } else if (el.tagName === 'A') {
+                .forEach(node => {
+                    if (checkNodeType(node)) {
+                        p.innerHTML = node.innerHTML
+                    } else {
                         div.classList.add('pt-poi-heading')
                         div.append(h2)
-                        h2.append(a)
-                        a.innerHTML = el.innerHTML
-                        a.href = el.href
-                        el.replaceWith(div)
+                        console.log(node.textContent)
+                        h2.innerHTML = node.textContent
                     }
-
-
                 })
-
-            li.innerHTML = ''
-            li.append(div, p)
-            // li.remove()
-            // ele.append(div,p)
+            parentDiv.append(div,p)
+            
         })
+
+        ele.replaceWith(parentDiv)
+}
+
+function iframeHandler(blockquote) {
+
+    // alert('working 2')
+    let link = null
+    let title = null
+    // const insightArticleBody = document.createElement('div')
+    const figure = document.createElement('figure')
+    const frame = document.createElement('div')
+    const player = document.createElement('div')
+    const iframe = document.createElement('iframe')
+
+    // insightArticleBody
+    figure.classList.add('youtube-block')
+    Object.assign(figure.style, {
+        width: '100%',
+        maxWidth: '830px',
+        margin: '36px auto 0',
+        marginTop: '60px',
+    });
+
+    frame.classList.add('youtube-block__frame')
+    Object.assign(frame.style, {
+        paddingTop: '56.25%',
+        overflow: 'hidden',
+        position: 'relative'
+    })
+
+    player.classList.add('youtube-block__player')
+    Object.assign(player.style, {
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        top: '0',
+        left: '0'
+    })
+
+    blockquote.childNodes.forEach(ele => {
+        if (ele?.children[0].tagName === 'A') {
+            link = ele.children[0].href
+        } else if (ele?.children[0].tagName === 'EM') {
+            title = ele.children[0].innerHTML
+        }
+    })
+    iframe.src = link
+    iframe.title = title
+    iframe.frameBorder = '0'
+    iframe.height = '100%'
+    iframe.width = '100%'
+    player.append(iframe)
+    frame.append(player)
+    figure.append(frame)
+
+    blockquote.replaceWith(figure)
+    return null
+
 }
 
 function proTipsHandler(ele) {
